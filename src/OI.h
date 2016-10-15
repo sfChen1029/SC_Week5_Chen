@@ -6,7 +6,7 @@
 class OI
 {
 private:
-	Joystick* driveStick;
+	//Joystick* driveStick;
 public:
 	OI();
 };

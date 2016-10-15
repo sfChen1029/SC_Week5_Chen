@@ -7,9 +7,9 @@
 class MoveUntilWall: public CommandBase
 {
 private:
-	//int distanceToTravel;
+	int distanceToTravel;
 public:
-	MoveUntilWall();//int distance);
+	MoveUntilWall(int distance);
 	void Initialize();
 	void Execute();
 	bool IsFinished();

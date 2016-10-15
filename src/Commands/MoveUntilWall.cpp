@@ -1,7 +1,7 @@
 #include "MoveUntilWall.h"
 
-MoveUntilWall::MoveUntilWall()//int distance)
-//:distanceToTravel(distance)
+MoveUntilWall::MoveUntilWall(int distance)
+:distanceToTravel(distance)
 {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(chassis);
@@ -23,7 +23,7 @@ void MoveUntilWall::Execute()
 // Make this return true when this Command no longer needs to run execute()
 bool MoveUntilWall::IsFinished()
 {
-	if (drive ->getUltrasonicDistance() < 60){//60 inches = 5 feet
+	if (drive ->getUltrasonicDistance() < distanceToTravel*12){ //distanceToTravel *12 converts to inches
 		return true;
 	}
 
